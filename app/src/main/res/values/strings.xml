@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RVIP2</string>
+    <string name="main_url">http://mentallandscape.com/</string>
+    <string name="url_to_start">http://mentallandscape.com/C_Catalog.htm</string>
+    <string name="image_tag">img</string>
+    <string name="src_tag">src</string>
+    <string name="newlink_tag">a</string>
+    <string name="href_tag">href</string>
+    <string name="super_thread_title">SUPER thread number</string>
 </resources>

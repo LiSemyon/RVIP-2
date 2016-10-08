@@ -17,6 +17,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -30,11 +31,11 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     Activity activity;
 
-    ArrayList<String> urls;
+    CopyOnWriteArrayList<String> urls;
 
     String _url;
 
-    public ImageAdapter(Activity activity, ArrayList<String> urls) {
+    public ImageAdapter(Activity activity, CopyOnWriteArrayList<String> urls) {
         this.activity = activity;
 
         this.urls = urls;
@@ -58,13 +59,13 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         if (holder instanceof ImageViewHolder) {
             ((ImageViewHolder) holder).url.setText(urls.get(position - 1));
             _url = urls.get(position - 1);
-            new Thread(new Runnable() {
+            /*new Thread(new Runnable() {
                 @Override
                 public void run() {
                     Bitmap bitmap = getBitmapFromURL(urls.get(position - 1 ));
                     onUi(bitmap, ((ImageViewHolder) holder));
                 }
-            }).start();
+            }).start();*/
         } else {
 
             View v = headers.get(position);
